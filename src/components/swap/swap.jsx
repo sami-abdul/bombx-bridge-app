@@ -513,7 +513,7 @@ class Swap extends Component {
     // };
 
     createWallet = async () => {
-        let result = await axios.post('https://bombxbridge-server.herokuapp.com/bridge/createWallet', {
+        let result = await axios.post('http://34.69.76.154:4000/bridge/createWallet', {
             address: this.state.bnbReceiveAddress
         })
         if (result) {
@@ -524,7 +524,7 @@ class Swap extends Component {
 
 
     verifyTransaction = async () => {
-        let result = await axios.post('https://bombxbridge-server.herokuapp.com/bridge/verifyTransaction', {
+        let result = await axios.post('http://34.69.76.154:4000/bridge/verifyTransaction', {
             address: this.state.bnbReceiveAddress
         })
         if (result) {
@@ -542,7 +542,7 @@ class Swap extends Component {
 
     transferToken = async () => {
         console.log("HI")
-        let result = await axios.post('https://bombxbridge-server.herokuapp.com/bridge/transfer', {
+        let result = await axios.post('http://34.69.76.154:4000/bridge/transfer', {
             address: this.state.bnbReceiveAddress,
             amount: this.state.numberOfTokens
         })
